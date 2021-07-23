@@ -92,7 +92,7 @@ phases:
         templateVariables: null
         templateVersion: null
         timeoutMillis: 10000
-        url: ${instance.host.publicDns}
+        url: ${infra.kubernetes.namespace}
         useProxy: false
     stepsInParallel: false
   - type: K8S_PHASE_STEP
