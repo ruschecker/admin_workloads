@@ -40,17 +40,16 @@ phases:
         executeOnDelegate: true
         host: null
         includeInfraSelectors: true
-        outputVars: appUrl
-        publishAsVar: false
+        outputVars: ''
+        publishAsVar: true
         scriptString: "app_name=$(kubectl get pod ${host.hostName} -n ${infra.kubernetes.namespace}\
           \ -o=jsonpath='{.metadata.labels.app}')\nappURL=$(kubectl get svc test-nginx-a-svc\
           \ -n ${infra.kubernetes.namespace} -o=jsonpath='{.status.loadBalancer.ingress[0].hostname}')\
           \   \necho ${appURL}"
         scriptType: BASH
-        secretOutputVars: ''
         sshKeyRefName: null
-        sweepingOutputName: null
-        sweepingOutputScope: null
+        sweepingOutputName: service
+        sweepingOutputScope: PIPELINE
         templateExpressions: null
         templateUuid: null
         templateVariables: null
