@@ -42,13 +42,20 @@ phases:
         includeInfraSelectors: true
         outputVars: ''
         publishAsVar: false
-        scriptString: echo ${app.name}
+        scriptString: |-
+          echo ${app.name}
+          echo ${service.name}
+          echo ${pipeline.name}
+          echo ${helmChart.name}
+          echo ${infra.name}
         scriptType: BASH
         sshKeyRefName: null
         sweepingOutputName: null
         sweepingOutputScope: null
         templateExpressions: null
-        templateVariables: ''
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
         timeoutMillis: 60000
     - type: PROMETHEUS
       name: Prometheus
