@@ -43,13 +43,13 @@ phases:
         outputVars: ''
         publishAsVar: true
         scriptString: "app_name=$(kubectl get pod ${host.hostName} -n ${infra.kubernetes.namespace}\
-          \ -o=jsonpath='{.metadata.labels.app}')\nappURL=$(kubectl get svc test-nginx-a-svc\
+          \ -o=jsonpath='{.metadata.labels.app}')\nappurl=$(kubectl get svc test-nginx-a-svc\
           \ -n ${infra.kubernetes.namespace} -o=jsonpath='{.status.loadBalancer.ingress[0].hostname}')\
-          \   \necho ${appURL}\nexport appURL"
+          \   \necho ${appurl}\nexport appurl"
         scriptType: BASH
         sshKeyRefName: null
-        sweepingOutputName: service
-        sweepingOutputScope: WORKFLOW
+        sweepingOutputName: serv
+        sweepingOutputScope: PIPELINE
         templateExpressions: null
         templateUuid: null
         templateVariables: null
