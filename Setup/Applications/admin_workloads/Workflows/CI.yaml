@@ -37,7 +37,6 @@ phases:
       properties:
         commandPath: null
         connectionAttributeName: null
-        connectionType: SSH
         executeOnDelegate: true
         host: null
         includeInfraSelectors: true
@@ -50,7 +49,7 @@ phases:
           echo ${host.hostName}
           echo ${instance.hostName}
           echo ${instance.host.publicDns}
-          curl  ${host.hostName}
+          echo ${infra.kubernetes.namespace}
         scriptType: BASH
         sshKeyRefName: null
         sweepingOutputName: null
