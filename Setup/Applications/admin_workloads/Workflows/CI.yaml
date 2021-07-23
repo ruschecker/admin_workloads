@@ -47,10 +47,9 @@ phases:
           \ -n ${infra.kubernetes.namespace} -o=jsonpath='{.status.loadBalancer.ingress[0].hostname}')\
           \   \necho ${appurl}\nexport appurl"
         scriptType: BASH
-        secretOutputVars: ''
         sshKeyRefName: null
         sweepingOutputName: serv
-        sweepingOutputScope: PIPELINE
+        sweepingOutputScope: WORKFLOW
         templateExpressions: null
         templateUuid: null
         templateVariables: null
