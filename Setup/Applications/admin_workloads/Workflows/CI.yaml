@@ -42,7 +42,7 @@ phases:
         includeInfraSelectors: true
         outputVars: ''
         publishAsVar: true
-        scriptString: 'URL=$(kubectl get svc exemplar-api-svc -n ${infra.kubernetes.namespace}
+        scriptString: 'URL=$(kubectl get svc ${service.name} -n ${infra.kubernetes.namespace}
           --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}") '
         scriptType: BASH
         sshKeyRefName: null
