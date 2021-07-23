@@ -49,7 +49,7 @@ phases:
         scriptType: BASH
         sshKeyRefName: null
         sweepingOutputName: service
-        sweepingOutputScope: PHASE
+        sweepingOutputScope: PIPELINE
         templateExpressions: null
         templateUuid: null
         templateVariables: null
