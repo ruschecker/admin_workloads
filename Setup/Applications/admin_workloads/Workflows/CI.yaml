@@ -31,6 +31,20 @@ phases:
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
+    steps:
+    - type: PROMETHEUS
+      name: Prometheus
+      properties:
+        analysisServerConfigId: 9riRP-6nRi6_jFldiw_wcQ
+        analysisTolerance: LOW
+        comparisonStrategy: COMPARE_WITH_CURRENT
+        customThresholdRefId: ac86ca4898704306a66e0768fd0938cc
+        timeDuration: 5
+        timeSeriesToAnalyze:
+        - metricName: CPU
+          metricType: INFRA
+          txnName: Throughput
+          url: container_cpu_usage_seconds_total{pod="$hostName",namespace="${infra.kubernetes.namespace}"}
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
