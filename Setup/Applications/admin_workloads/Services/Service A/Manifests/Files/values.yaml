@@ -1,5 +1,5 @@
 name: test-nginx-a
-replicas: 4
+replicas: 1
 
 image: ${artifact.metadata.image}
 dockercfg: ${artifact.source.dockerconfig}
