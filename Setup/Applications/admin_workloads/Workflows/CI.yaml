@@ -89,6 +89,24 @@ phases:
         timeoutMillis: 10000
         url: http://${context.service.appURL}
         useProxy: false
+    - type: SHELL_SCRIPT
+      name: Shell Script_2
+      properties:
+        commandPath: null
+        connectionAttributeName: null
+        executeOnDelegate: true
+        host: null
+        includeInfraSelectors: true
+        outputVars: ''
+        publishAsVar: false
+        scriptString: echo ${context.service.appURL}
+        scriptType: BASH
+        sshKeyRefName: null
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        templateExpressions: null
+        templateVariables: ''
+        timeoutMillis: 60000
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
