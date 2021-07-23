@@ -44,9 +44,11 @@ phases:
         sweepingOutputName: null
         sweepingOutputScope: null
         tags: null
-        templateVariables: ''
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
         timeoutMillis: 10000
-        url: /
+        url: $context.api_service.URL
         useProxy: false
     stepsInParallel: false
   - type: K8S_PHASE_STEP
