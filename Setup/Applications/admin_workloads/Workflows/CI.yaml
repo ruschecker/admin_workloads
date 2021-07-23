@@ -39,7 +39,10 @@ phases:
         analysisTolerance: LOW
         comparisonStrategy: COMPARE_WITH_CURRENT
         customThresholdRefId: ac86ca4898704306a66e0768fd0938cc
-        timeDuration: 5
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
+        timeDuration: 15
         timeSeriesToAnalyze:
         - metricName: CPU
           metricType: INFRA
