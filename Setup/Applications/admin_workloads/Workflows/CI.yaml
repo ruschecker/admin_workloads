@@ -45,7 +45,7 @@ phases:
         scriptString: "app_name=$(kubectl get pod ${host.hostName} -n ${infra.kubernetes.namespace}\
           \ -o=jsonpath='{.metadata.labels.app}')\nappURL=$(kubectl get svc test-nginx-a-svc\
           \ -n ${infra.kubernetes.namespace} -o=jsonpath='{.status.loadBalancer.ingress[0].hostname}')\
-          \   \necho ${appURL}\nuname -a"
+          \   \necho ${appURL}\nexport appURL"
         scriptType: BASH
         sshKeyRefName: null
         sweepingOutputName: service
