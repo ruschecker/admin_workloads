@@ -91,7 +91,7 @@ phases:
         templateVariables: null
         templateVersion: null
         timeoutMillis: 10000
-        url: http://${context.service.appURL}
+        url: http://${context.serv.appurl}
         useProxy: false
     stepsInParallel: false
   - type: K8S_PHASE_STEP
