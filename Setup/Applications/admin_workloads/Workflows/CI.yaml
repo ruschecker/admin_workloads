@@ -32,28 +32,6 @@ phases:
   - type: K8S_PHASE_STEP
     name: Verify
     steps:
-    - type: SHELL_SCRIPT
-      name: getUrl
-      properties:
-        commandPath: null
-        connectionAttributeName: null
-        executeOnDelegate: true
-        host: null
-        includeInfraSelectors: true
-        outputVars: ''
-        publishAsVar: true
-        scriptString: "echo ${infra.name}\necho ${service.name}\necho ${service.description}\n\
-          \nURL=$(kubectl get svc tbd  -n ${infra.kubernetes.namespace} --template=\"\
-          {{range .status.loadBalancer.ingress}}{{.ip}}{{end}}\") "
-        scriptType: BASH
-        sshKeyRefName: null
-        sweepingOutputName: api_service
-        sweepingOutputScope: PIPELINE
-        templateExpressions: null
-        templateUuid: null
-        templateVariables: null
-        templateVersion: null
-        timeoutMillis: 60000
     - type: HTTP
       name: HTTP
       properties:
