@@ -1,0 +1,4 @@
+harnessApiVersion: '1.0'
+type: DOCKER
+imageName: ruschecker/nginx_test_b
+serverName: Docker Hub
