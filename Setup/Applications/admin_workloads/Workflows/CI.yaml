@@ -42,14 +42,10 @@ phases:
         includeInfraSelectors: true
         outputVars: ''
         publishAsVar: false
-        scriptString: |-
-          echo ${app.name}
-          echo ${service.name}
-          echo ${infra.name}
-          echo ${host.hostName}
-          echo ${instance.hostName}
-          echo ${instance.host.publicDns}
-          echo ${infra.kubernetes.namespace}
+        scriptString: "app_name=$(kubectl get pod ${host.hostName} -n ${infra.kubernetes.namespace}\
+          \ -o=jsonpath='{.metadata.labels.app}')\nappURL=$(kubectl get svc test-nginx-a-svc\
+          \ -n ${infra.kubernetes.namespace} -o=jsonpath='{.status.loadBalancer.ingress[0].hostname}')\
+          \   \ncurl ${appUrl}"
         scriptType: BASH
         sshKeyRefName: null
         sweepingOutputName: null
