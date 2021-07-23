@@ -65,7 +65,7 @@ phases:
         includeInfraSelectors: true
         outputVars: ''
         publishAsVar: false
-        scriptString: echo ${context.service.appurl}
+        scriptString: echo ${context.serv.appurl}
         scriptType: BASH
         sshKeyRefName: null
         sweepingOutputName: null
