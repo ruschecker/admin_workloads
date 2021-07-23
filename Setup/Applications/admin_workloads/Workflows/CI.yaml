@@ -45,9 +45,11 @@ phases:
         scriptString: |-
           echo ${app.name}
           echo ${service.name}
-          echo ${pipeline.name}
           echo ${helmChart.name}
           echo ${infra.name}
+          echo ${host.hostName}
+          echo ${instance.hostName}
+          echo ${instance.host.publicDns}
         scriptType: BASH
         sshKeyRefName: null
         sweepingOutputName: null
