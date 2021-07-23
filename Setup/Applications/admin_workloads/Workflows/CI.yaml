@@ -48,6 +48,22 @@ phases:
           metricType: INFRA
           txnName: Throughput
           url: container_cpu_usage_seconds_total{pod="$hostName",namespace="${infra.kubernetes.namespace}"}
+    - type: HTTP
+      name: HTTP
+      properties:
+        assertion: ''
+        body: ''
+        executeWithPreviousSteps: false
+        method: GET
+        publishAsVar: false
+        responseProcessingExpressions: ''
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        tags: null
+        templateVariables: ''
+        timeoutMillis: 10000
+        url: ${host.hostName}
+        useProxy: false
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
