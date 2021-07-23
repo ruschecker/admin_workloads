@@ -50,6 +50,25 @@ phases:
         timeoutMillis: 10000
         url: $context.api_service.URL
         useProxy: false
+    - type: SHELL_SCRIPT
+      name: getUrl
+      properties:
+        commandPath: null
+        connectionAttributeName: null
+        executeOnDelegate: true
+        host: null
+        includeInfraSelectors: true
+        outputVars: ''
+        publishAsVar: true
+        scriptString: 'URL=$(kubectl get svc exemplar-api-svc -n development --template="{{range
+          .status.loadBalancer.ingress}}{{.ip}}{{end}}") '
+        scriptType: BASH
+        sshKeyRefName: null
+        sweepingOutputName: api_service
+        sweepingOutputScope: PIPELINE
+        templateExpressions: null
+        templateVariables: ''
+        timeoutMillis: 60000
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
