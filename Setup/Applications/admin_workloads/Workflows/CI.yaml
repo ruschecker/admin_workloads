@@ -71,24 +71,6 @@ phases:
           metricType: INFRA
           txnName: Throughput
           url: container_cpu_usage_seconds_total{pod="$hostName",namespace="${infra.kubernetes.namespace}"}
-    - type: HTTP
-      name: HTTP
-      properties:
-        assertion: ''
-        body: ''
-        executeWithPreviousSteps: false
-        method: GET
-        publishAsVar: false
-        responseProcessingExpressions: ''
-        sweepingOutputName: null
-        sweepingOutputScope: null
-        tags: null
-        templateUuid: null
-        templateVariables: null
-        templateVersion: null
-        timeoutMillis: 10000
-        url: http://${context.service.appURL}
-        useProxy: false
     - type: SHELL_SCRIPT
       name: Shell Script_2
       properties:
@@ -107,6 +89,24 @@ phases:
         templateExpressions: null
         templateVariables: ''
         timeoutMillis: 60000
+    - type: HTTP
+      name: HTTP
+      properties:
+        assertion: ''
+        body: ''
+        executeWithPreviousSteps: false
+        method: GET
+        publishAsVar: false
+        responseProcessingExpressions: ''
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        tags: null
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
+        timeoutMillis: 10000
+        url: http://${context.service.appURL}
+        useProxy: false
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
