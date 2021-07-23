@@ -87,7 +87,7 @@ phases:
         templateVariables: null
         templateVersion: null
         timeoutMillis: 10000
-        url: http://test-nginx-a-svc/
+        url: http://${context.service.appUrl}
         useProxy: false
     stepsInParallel: false
   - type: K8S_PHASE_STEP
