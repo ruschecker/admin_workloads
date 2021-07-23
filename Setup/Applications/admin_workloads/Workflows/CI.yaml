@@ -75,22 +75,6 @@ phases:
         templateVariables: null
         templateVersion: null
         timeoutMillis: 60000
-    - type: PROMETHEUS
-      name: Prometheus
-      properties:
-        analysisServerConfigId: 9riRP-6nRi6_jFldiw_wcQ
-        analysisTolerance: LOW
-        comparisonStrategy: COMPARE_WITH_CURRENT
-        customThresholdRefId: ac86ca4898704306a66e0768fd0938cc
-        templateUuid: null
-        templateVariables: null
-        templateVersion: null
-        timeDuration: 15
-        timeSeriesToAnalyze:
-        - metricName: CPU
-          metricType: INFRA
-          txnName: Throughput
-          url: container_cpu_usage_seconds_total{pod="$hostName",namespace="${infra.kubernetes.namespace}"}
     - type: HTTP
       name: HTTP
       properties:
