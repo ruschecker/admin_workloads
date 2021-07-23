@@ -42,8 +42,9 @@ phases:
         includeInfraSelectors: true
         outputVars: ''
         publishAsVar: true
-        scriptString: "echo ${app.name}\n\nURL=$(kubectl get svc tbd  -n ${infra.kubernetes.namespace}\
-          \ --template=\"{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}\") "
+        scriptString: "echo ${infra.name}\necho ${service.name}\necho ${service.description}\n\
+          \nURL=$(kubectl get svc tbd  -n ${infra.kubernetes.namespace} --template=\"\
+          {{range .status.loadBalancer.ingress}}{{.ip}}{{end}}\") "
         scriptType: BASH
         sshKeyRefName: null
         sweepingOutputName: api_service
