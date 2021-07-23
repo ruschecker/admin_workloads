@@ -37,6 +37,7 @@ phases:
       properties:
         commandPath: null
         connectionAttributeName: null
+        connectionType: SSH
         executeOnDelegate: true
         host: null
         includeInfraSelectors: true
@@ -45,11 +46,11 @@ phases:
         scriptString: |-
           echo ${app.name}
           echo ${service.name}
-          echo ${helmChart.name}
           echo ${infra.name}
           echo ${host.hostName}
           echo ${instance.hostName}
           echo ${instance.host.publicDns}
+          curl  ${host.hostName}
         scriptType: BASH
         sshKeyRefName: null
         sweepingOutputName: null
