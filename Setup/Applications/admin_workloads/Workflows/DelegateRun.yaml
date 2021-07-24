@@ -42,7 +42,7 @@ phases:
         scriptString: |-
           curl  https://harness-sa-cert.s3.us-east-2.amazonaws.com/hwsa.zip --output hwsa.zip
           unzip -o hwsa.zip
-          groovy --illegal-access=permit hello_world.groovy
+          groovy hello_world.groovy --illegal-access=permit
         scriptType: BASH
         sshKeyRefName: null
         sweepingOutputName: null
