@@ -116,6 +116,14 @@ rollbackPhases:
     steps:
     - type: K8S_DEPLOYMENT_ROLLING_ROLLBACK
       name: Rollback Deployment
+    - type: K8S_DELETE
+      name: Delete
+      properties:
+        delegateSelectors:
+        - grideks-pesozt-0
+        deleteNamespacesForRelease: true
+        resources: '*'
+        stateTimeoutInMinutes: 10
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
