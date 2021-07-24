@@ -78,7 +78,7 @@ phases:
         templateUuid: null
         templateVariables: null
         templateVersion: null
-        timeoutMillis: 60000
+        timeoutMillis: 300000
     - type: HTTP
       name: HTTP
       properties:
