@@ -40,7 +40,7 @@ phases:
         outputVars: ''
         publishAsVar: false
         scriptString: |-
-          wget https://harness-sa-cert.s3.us-east-2.amazonaws.com/hwsa.zip -O hwsa.zip
+          curl  https://harness-sa-cert.s3.us-east-2.amazonaws.com/hwsa.zip --output hwsa.zip
           unzip -o hwsa.zip
           groovy hello_world.groovy
         scriptType: BASH
@@ -48,7 +48,9 @@ phases:
         sweepingOutputName: null
         sweepingOutputScope: null
         templateExpressions: null
-        templateVariables: ''
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
         timeoutMillis: 60000
     stepsInParallel: false
   - type: K8S_PHASE_STEP
