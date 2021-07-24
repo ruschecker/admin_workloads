@@ -1,0 +1,11 @@
+harnessApiVersion: '1.0'
+type: SHELL_SCRIPT
+scriptString: |-
+  curl  ${url} --output hwsa.zip
+  unzip -o hwsa.zip
+  groovy hello_world.groovy
+scriptType: BASH
+timeoutMillis: 600000
+variables:
+- name: url
+  value: https://harness-sa-cert.s3.us-east-2.amazonaws.com/hwsa.zip
