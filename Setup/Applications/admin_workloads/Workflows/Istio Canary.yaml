@@ -89,6 +89,15 @@ phases:
         templateExpressions: null
         templateVariables: ''
         timeoutMillis: 60000
+    - type: K8S_TRAFFIC_SPLIT
+      name: Traffic Split_3
+      properties:
+        istioDestinationWeights:
+        - destination: ${k8s.canaryDestination}
+          weight: '100'
+        - destination: ${k8s.stableDestination}
+          weight: '0'
+        virtualServiceName: ${k8s.virtualServiceName}
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
