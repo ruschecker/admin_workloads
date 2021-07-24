@@ -34,7 +34,7 @@ phases:
           connectorId: DcynlYxTS3G8azuNYFGDxg
           commitId: ''
           branch: master
-          filePath: helm-lab/templates/deployment.yaml
+          filePath: helm-lab/values.yaml
           useBranch: true
         helmReleaseNamePrefix: test
         steadyStateTimeout: 10
