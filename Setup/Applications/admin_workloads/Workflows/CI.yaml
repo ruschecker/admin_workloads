@@ -79,6 +79,13 @@ phases:
         templateVariables: null
         templateVersion: null
         timeoutMillis: 60000
+    - type: APPROVAL
+      name: Approval
+      properties:
+        approvalStateType: USER_GROUP
+        timeoutMillis: 86400000
+        userGroupNames:
+        - Account Administrator
     - type: HTTP
       name: HTTP
       properties:
@@ -97,13 +104,6 @@ phases:
         timeoutMillis: 10000
         url: http://${context.serv.appurl}
         useProxy: false
-    - type: APPROVAL
-      name: Approval
-      properties:
-        approvalStateType: USER_GROUP
-        timeoutMillis: 86400000
-        userGroupNames:
-        - Account Administrator
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
