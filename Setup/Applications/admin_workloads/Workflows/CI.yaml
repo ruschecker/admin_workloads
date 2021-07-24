@@ -67,6 +67,7 @@ phases:
         outputVars: ''
         publishAsVar: false
         scriptString: |-
+          sleep 10
           echo ${context.serv.appurl}
           curl  ${context.serv.appurl}
         scriptType: BASH
