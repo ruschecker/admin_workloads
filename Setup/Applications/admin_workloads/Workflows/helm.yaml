@@ -34,7 +34,7 @@ phases:
           connectorId: DcynlYxTS3G8azuNYFGDxg
           commitId: ''
           branch: master
-          filePath: helm-lab/
+          filePath: /helm-lab
           useBranch: true
         helmReleaseNamePrefix: test
         steadyStateTimeout: 10
