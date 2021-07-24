@@ -1,6 +1,0 @@
-harnessApiVersion: '1.0'
-type: AMAZON_S3
-artifactPaths:
-- /
-bucketName: vbarinov-harness
-serverName: Amazon Web Services
