@@ -62,15 +62,6 @@ phases:
         templateExpressions: null
         templateVariables: ''
         timeoutMillis: 60000
-    - type: K8S_TRAFFIC_SPLIT
-      name: Traffic Split_2
-      properties:
-        istioDestinationWeights:
-        - destination: ${k8s.canaryDestination}
-          weight: '66'
-        - destination: ${k8s.stableDestination}
-          weight: '34'
-        virtualServiceName: ${k8s.virtualServiceName}
     - type: SHELL_SCRIPT
       name: slow down
       properties:
