@@ -11,6 +11,7 @@ image:
 
 nameOverride: ""
 fullnameOverride: ""
+name: "helm-lab"
 
 service:
   type: ClusterIP
