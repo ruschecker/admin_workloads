@@ -3,7 +3,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ $fullName }}
+  name: {{ $fullName  | lower}}
   labels:
     app.kubernetes.io/name: {{ include "helmHook.name" .  | lower}}
     helm.sh/chart: {{ include "helmHook.chart" . }}
@@ -32,7 +32,7 @@ spec:
         {{- range .paths }}
           - path: {{ . }}
             backend:
-              serviceName: {{ $fullName }}
+              serviceName: {{ $fullName | lower}}
               servicePort: http
         {{- end }}
   {{- end }}
