@@ -3,5 +3,5 @@ type: APPLICATION_MANIFEST
 helmChartConfig:
   chartName: helmHook
   chartUrl: https://ruschecker.github.io/admin_workloads/helm-lab
-  chartVersion: 0.1.4
+  chartVersion: 0.1.5
 storeType: HelmChartRepo
