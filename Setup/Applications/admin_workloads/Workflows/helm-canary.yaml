@@ -47,6 +47,9 @@ phases:
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
+    steps:
+    - type: HELM_ROLLBACK
+      name: Helm Rollback
     stepsInParallel: false
   provisionNodes: false
   serviceName: helm
