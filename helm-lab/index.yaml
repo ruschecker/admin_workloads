@@ -3,6 +3,15 @@ entries:
   helmHook:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-07-26T04:20:33.260785+04:00"
+    description: A Helm chart for Kubernetes
+    digest: 4436b1925667a6683cf0a7f6ee2540d8d338e78c59bf9c0669060ac689872afe
+    name: helmHook
+    urls:
+    - https://github.com/ruschecker/admin_workloads/releases/download/helmHook-0.1.10/helmHook-0.1.10.tgz
+    version: 0.1.10
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2021-07-26T04:17:07.565864+04:00"
     description: A Helm chart for Kubernetes
     digest: 1193bc59716e3de3c604e34078d6797f24dac8ccc30ba1939448533e83482184
@@ -91,5 +100,5 @@ entries:
     urls:
     - https://github.com/ruschecker/admin_workloads/releases/download/helmHook-0.1.0/helmHook-0.1.0.tgz
     version: 0.1.0
-generated: "2021-07-26T04:17:07.566039+04:00"
+generated: "2021-07-26T04:20:35.344459+04:00"
 
