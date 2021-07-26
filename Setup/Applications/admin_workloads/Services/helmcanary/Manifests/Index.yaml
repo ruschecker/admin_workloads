@@ -2,6 +2,5 @@ harnessApiVersion: '1.0'
 type: APPLICATION_MANIFEST
 helmChartConfig:
   chartName: helmHook
-  chartVersion: 0.1.9
   connectorName: helmrepo
 storeType: HelmChartRepo
