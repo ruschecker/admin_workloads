@@ -1,5 +1,5 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "helmHook.fullname" . -}}
+{{- $fullName := include "helmHook.fullname" . | lower -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:

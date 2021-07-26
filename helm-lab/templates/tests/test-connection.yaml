@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "{{ include "helmHook.fullname" . }}-test-connection"
+  name: "{{ include "helmHook.fullname" . | lower }}-test-connection"
   labels:
     app.kubernetes.io/name: {{ include "helmHook.name" . | lower}}
     helm.sh/chart: {{ include "helmHook.chart" . }}
