@@ -14,5 +14,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args:  ['{{ include "helmHook.fullname" . }}:{{ .Values.service.port }}']
+      args:  ['{{ include "helmHook.fullname" . | lower }}:{{ .Values.service.port }}']
   restartPolicy: Never
