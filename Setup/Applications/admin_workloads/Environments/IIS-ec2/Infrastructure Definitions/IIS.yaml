@@ -4,7 +4,6 @@ cloudProviderType: AWS
 deploymentType: WINRM
 infrastructure:
 - type: AWS_SSH
-  awsInstanceFilter: {}
   cloudProviderName: Amazon Web Services
   desiredCapacity: 0
   hostConnectionAttrsName: mywin
